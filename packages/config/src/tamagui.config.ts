@@ -1,10 +1,11 @@
-import { createTamagui } from 'tamagui'
+import { createFont, createTamagui, createTokens, getFontSizeToken } from 'tamagui'
 import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
 import { tokens, themes } from '@tamagui/config/v3'
 import { createMedia } from '@tamagui/react-native-media-driver'
 
 import { animations } from '@my/ui/src/animations'
+import { getConfig, getTokens } from '@tamagui/core'
 
 const headingFont = createInterFont({
   size: {
@@ -50,6 +51,48 @@ const bodyFont = createInterFont(
   }
 )
 
+const interFont = createFont({
+  family: 'Sora',
+  size: {
+    1: 32,
+    2: 20,
+    3: 18,
+    4: 16,
+    5: 14,
+    6: 12,
+  },
+  lineHeight: {
+    /* px ? */ 1: 48,
+    2: 30,
+    3: 27,
+    4: 24,
+    5: 21,
+    6: 19.2,
+    7: 18,
+    8: 16.8,
+    9: 14.4,
+  },
+  weight: {},
+  letterSpacing: {},
+})
+
+export const token = createTokens({
+  /* name */
+  color: {
+    brown: '#C67C4E',
+    skin_tone: '#EDD6C8',
+    black: '#313131',
+    gray: '#E3E3E3',
+    white: '#F9F2ED',
+  },
+  space: {},
+  size: {},
+  radius: {},
+  zIndex: {},
+  icon: {
+    small: 16,
+  },
+})
 export const config = createTamagui({
   defaultFont: 'body',
   animations,
@@ -65,11 +108,13 @@ export const config = createTamagui({
   fonts: {
     body: bodyFont,
     heading: headingFont,
+    inter: interFont,
   },
   settings: {
     allowedStyleValues: 'somewhat-strict',
   },
   themes,
+  token,
   tokens,
   media: createMedia({
     xs: { maxWidth: 660 },

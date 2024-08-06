@@ -30,8 +30,11 @@
   "dependencies": {
     "@babel/runtime": "^7.24.6",
     "@manypkg/cli": "^0.21.4",
+    "@tamagui/card": "^1.105.8",
     "@tamagui/config": "^1.105.4",
     "@tamagui/core": "^1.105.4",
+    "@tamagui/image": "^1.105.5",
+    "@tamagui/stacks": "^1.105.8",
     "check-dependency-version-consistency": "^4.1.0",
     "eslint": "^9.3.0",
     "node-gyp": "^10.1.0",

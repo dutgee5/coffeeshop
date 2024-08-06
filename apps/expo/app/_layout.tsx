@@ -18,6 +18,7 @@ export default function App() {
   const [interLoaded, interError] = useFonts({
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
+    Sora: require('apps/expo/assets/fonts/Sora-Regular.ttf'),
   })
 
   useEffect(() => {

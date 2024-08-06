@@ -1,5 +1,7 @@
-import { Button, Paragraph, YStack } from '@my/ui'
+import { Button, Paragraph, View, YStack } from '@my/ui'
+import { getTokenForKey } from '@tamagui/core'
 import { ChevronLeft } from '@tamagui/lucide-icons'
+import { colorTokens } from '@tamagui/themes'
 import { useParams, useRouter } from 'solito/navigation'
 
 export function UserDetailScreen() {
@@ -12,6 +14,11 @@ export function UserDetailScreen() {
       <Button icon={ChevronLeft} onPress={() => router.back()}>
         Go Home
       </Button>
+      {/* <View>
+        <Paragraph color={'$skin_tone'} lineHeight={'$1'}>
+          ssaa{' '}
+        </Paragraph>
+      </View> */}
     </YStack>
   )
 }
